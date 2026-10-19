@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.app.controller.RegistrationController">
+   <children>
+      <Label layoutX="257.0" layoutY="25.0" text="Registration">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="77.0" text="Name" />
+      <Label layoutX="182.0" layoutY="163.0" text="Email" />
+      <Label layoutX="182.0" layoutY="246.0" text="Password" />
+      <TextField fx:id="nameFiield" layoutX="182.0" layoutY="95.0" />
+      <TextField fx:id="emailField" layoutX="182.0" layoutY="187.0" />
+      <PasswordField fx:id="passField" layoutX="183.0" layoutY="270.0" />
+      <Label layoutX="398.0" layoutY="322.0" onMouseClicked="#switchLog" prefHeight="18.0" prefWidth="72.0" text="SwitchScene" textFill="RED" />
+      <Button layoutX="274.0" layoutY="319.0" mnemonicParsing="false" onAction="#Action" text="Register" />
+   </children>
+</AnchorPane>
