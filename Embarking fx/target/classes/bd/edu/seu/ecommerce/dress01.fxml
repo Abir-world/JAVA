@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.ecommerce.controller.Dress1Controller">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="202.0" layoutY="14.0" text="Dress Collection" textFill="RED">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="40.0" text="Dress Name: (jack &amp; jane Hoodie)" />
+            <TextField fx:id="nameField" layoutX="24.0" layoutY="57.0" />
+            <Label layoutX="24.0" layoutY="95.0" text="Dress Type : (hoodie Sweater)" />
+            <Label layoutX="21.0" layoutY="153.0" text="Available size: (Mediam/Large)" />
+            <Label layoutX="23.0" layoutY="209.0" text="Dress Colour: (White/Black)" />
+            <Label layoutX="24.0" layoutY="264.0" text="Price: (500-1000)" />
+            <Label layoutX="24.0" layoutY="305.0" text="Dress Details:" />
+            <TextArea fx:id="detailsAreaField" layoutX="24.0" layoutY="323.0" prefHeight="36.0" prefWidth="178.0" />
+            <ChoiceBox fx:id="dtypeChoiceField" layoutX="24.0" layoutY="110.0" prefWidth="150.0" />
+            <ComboBox fx:id="sizeComboField" layoutX="23.0" layoutY="171.0" prefWidth="150.0" />
+            <Slider fx:id="priceSliderField" layoutX="25.0" layoutY="282.0" />
+            <Separator layoutX="296.0" layoutY="49.0" orientation="VERTICAL" prefHeight="302.0" prefWidth="7.0" />
+            <Button layoutX="280.0" layoutY="361.0" mnemonicParsing="false" onAction="#mainAction" prefHeight="26.0" prefWidth="52.0" text="Save" />
+            <Label layoutX="323.0" layoutY="49.0" text="Last Purchase Date: (2025-12-20)" />
+            <Label layoutX="323.0" layoutY="106.0" text="Available Quantity: (0 - 500)" />
+            <Label layoutX="321.0" layoutY="162.0" text="Discount Code:(SECRET20)" />
+            <Label layoutX="323.0" layoutY="218.0" text="Targated Customer: (Male/Female)" />
+            <Label layoutX="329.0" layoutY="314.0" text="Upload Picture :" />
+            <DatePicker fx:id="dateField" layoutX="321.0" layoutY="67.0" />
+            <Spinner fx:id="quantitySpinnerField" layoutX="322.0" layoutY="125.0" />
+            <PasswordField fx:id="discountCodeField" layoutX="322.0" layoutY="180.0" />
+            <RadioButton layoutX="323.0" layoutY="240.0" mnemonicParsing="false" selected="true" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleField" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="397.0" layoutY="240.0" mnemonicParsing="false" text="Female" toggleGroup="$toggleField" />
+            <CheckBox fx:id="fbBoostcheckBoxField" layoutX="323.0" layoutY="275.0" mnemonicParsing="false" text="Enable Facebook Boosting" />
+            <ImageView fx:id="imagePath" fitHeight="60.0" fitWidth="60.0" layoutX="440.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="uploadButton" layoutX="446.0" layoutY="348.0" mnemonicParsing="false" text="Upload" />
+            <Button layoutX="507.0" layoutY="15.0" mnemonicParsing="false" onAction="#showActionButton" onMouseClicked="#goToDress2" text="Show List" />
+            <Label fx:id="dressNameErrorLabel" layoutX="24.0" layoutY="84.0" prefHeight="0.0" prefWidth="110.0" textFill="RED" />
+            <Label fx:id="dressTypeErrorLabel" layoutX="25.0" layoutY="137.0" prefHeight="18.0" prefWidth="90.0" textFill="RED" />
+            <Label fx:id="sizeErrorLabel" layoutX="25.0" layoutY="197.0" prefHeight="18.0" prefWidth="90.0" textFill="RED" />
+            <Label fx:id="colorErrorLabel" layoutX="21.0" layoutY="249.0" prefHeight="18.0" prefWidth="85.0" textFill="RED" />
+            <Label fx:id="priceErrorLabel" layoutX="24.0" layoutY="297.0" prefHeight="18.0" prefWidth="102.0" textFill="RED" />
+            <Label fx:id="detailsErrorLabel" layoutX="24.0" layoutY="365.0" prefHeight="18.0" prefWidth="110.0" textFill="RED" />
+            <Label fx:id="dateErrorField" layoutX="323.0" layoutY="93.0" prefHeight="18.0" prefWidth="102.0" textFill="RED" />
+            <Label fx:id="qualityErrorLabel" layoutX="323.0" layoutY="153.0" prefHeight="18.0" prefWidth="102.0" textFill="RED" />
+            <Label fx:id="discountErrorLabel" layoutX="333.0" layoutY="200.0" prefHeight="18.0" prefWidth="90.0" textFill="RED" />
+            <Label fx:id="customerErrorLabel" layoutX="323.0" layoutY="258.0" prefHeight="18.0" prefWidth="157.0" textFill="RED" />
+            <Label fx:id="uploadErrorLabel" layoutX="456.0" layoutY="374.0" prefHeight="18.0" prefWidth="48.0" textFill="RED" />
+            <CheckBox fx:id="whiteCheckBox" layoutX="23.0" layoutY="232.0" mnemonicParsing="false" text="White" />
+            <CheckBox fx:id="blackCheckBox" layoutX="92.0" layoutY="232.0" mnemonicParsing="false" text="Black" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
